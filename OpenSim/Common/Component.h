@@ -4478,7 +4478,6 @@ void Input<T>::finalizeConnection(const Component& root) {
             const Output<T>& output = std::get<0>(reg).getRef();
             std::string channelName = std::get<1>(reg);
             const AbstractChannel& channel = output.getChannel(channelName);
-            const std::string& alias = std::get<2>(reg);
             connectInternal(channel, std::get<2>(reg));
         }
 

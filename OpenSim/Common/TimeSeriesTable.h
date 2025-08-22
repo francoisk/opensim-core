@@ -459,7 +459,6 @@ public:
      */
     void trim(const double& newStartTime, const double& newFinalTime) {
         OPENSIM_THROW_IF(newFinalTime < newStartTime, EmptyTable);
-        const auto& timeCol = this->getIndependentColumn();
         size_t start_index = 0;
         size_t last_index = this->getNumRows() - 1;
         // Avoid throwing exception if newStartTime is less than first time
